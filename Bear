@@ -1,0 +1,55 @@
+int x;
+int y;
+int bodyy;
+int armlength=85;
+int armheight=55;
+int legwidth=108;
+int legheight=60;
+int headdiam=200;
+int bodylength=headdiam-10;
+int bodyheight=headdiam+70;
+int smallbodywidth=bodylength-50;
+int smallbodyheight=bodyheight-70;
+int eyediam=25;
+int noselength=35;
+int noseheight=25;
+color ear1;
+color ear2;
+color arm1;
+color arm2;
+color leg1;
+color leg2;
+color body1;
+
+void setup() {
+  size (600,800);
+  x=width/2;
+  y=height/2;
+bodyy=y+235;
+}
+void draw() {
+  background (255);
+  ellipse (x,y,headdiam,headdiam); //head
+  ellipse (x,bodyy,bodylength,bodyheight); //body
+  ellipse (x,bodyy,smallbodywidth,smallbodyheight); //inner body
+  ellipse (x+95,y+368,legwidth,legheight); //right leg
+  ellipse (x-95,y+368,legwidth,legheight); //left leg
+  pushMatrix();
+  translate (x+128,y+185);
+  rotate(radians(-45));
+  ellipse (0,0,armlength,armheight); //right arm
+  popMatrix();
+  pushMatrix();
+   translate (x-128,y+185);
+  rotate(radians(45));
+  ellipse (0,0,armlength,armheight); //left arm
+  popMatrix();
+  ellipse (x+40,y-20,eyediam,eyediam); //right eye
+  ellipse (x-40,y-20,eyediam,eyediam); //left eye
+  ellipse(x,y+30,noselength,noseheight); //nose
+  strokeWeight(6);
+  line(x,y+44,x,y+70);
+  strokeWeight(3);
+  
+}
+  
