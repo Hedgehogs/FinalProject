@@ -1,0 +1,16 @@
+void setup() {
+  size(displayWidth, displayHeight);
+}
+void draw() {
+  stroke(3);
+  line(300, 700, 200, 400);
+  line(300, 700, 300, 400);
+  line(300, 700, 400, 400);
+  ellipse(200, 400, 75, 125);
+  triangle(219, 453, 210, 490, 240, 460);
+  //first balloon, must be filled at same time
+  ellipse(300, 350, 80, 125);
+  triangle(300, 411, 275, 435, 325, 435);
+  //second ballon, must be filled at same time
+  ellipse(400, 400, 75, 125);
+}
