@@ -1,0 +1,9 @@
+void setup() {
+  size(800, 800);
+}
+void draw() {
+  noStroke();
+  ellipse(200, 200, 200, 124);
+  println(mouseX + ", " + mouseY);
+  ellipse(198, 156, 100, 100);
+}
