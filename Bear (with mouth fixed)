@@ -1,0 +1,82 @@
+PFont myFont;
+int x;
+int y;
+int bodyy;
+int eary;
+int armlength=85;
+int armheight=55;
+int legwidth=108;
+int legheight=60;
+int headdiam=200;
+int bodylength=headdiam-10;
+int bodyheight=headdiam+70;
+int smallbodywidth=bodylength-70;
+int smallbodyheight=bodyheight-80;
+int eyediam=25;
+int noselength=35;
+int noseheight=25;
+int outear=50;
+int inear=28;
+
+
+void setup() {
+  size (600, 800);
+  x=width/2;
+  y=height/2;
+  bodyy=y+235;
+  eary=y-100;
+  //myFont=loadFont("Aharoni-Bold-48.vlw");
+}
+void draw() {
+  background (255);
+  //println(mouseX + " ," + mouseY);
+  ellipse (x, y, headdiam, headdiam); //head
+  ellipse (x, bodyy, bodylength, bodyheight); //body
+  ellipse (x, bodyy, smallbodywidth, smallbodyheight); //inner body
+  ellipse (x+95, y+368, legwidth, legheight); //right leg
+  ellipse (x-95, y+368, legwidth, legheight); //left leg
+  pushMatrix();
+  translate (x+128, y+185);
+  rotate(radians(-45));
+  ellipse (0, 0, armlength, armheight); //right arm
+  popMatrix();
+  pushMatrix();
+  translate (x-128, y+185);
+  rotate(radians(45));
+  ellipse (0, 0, armlength, armheight); //left arm
+  popMatrix();
+  ellipse (x+40, y-20, eyediam, eyediam); //right eye
+  ellipse (x-40, y-20, eyediam, eyediam); //left eye
+  ellipse (x+73, eary, outear, outear); //right outer ear
+  ellipse (x-73, eary, outear, outear); //left outer ear
+  ellipse (x+73, eary, inear, inear); //right inner ear
+  ellipse (x-73, eary, inear, inear); //left inner ear  
+  ellipse(x, y+30, noselength, noseheight); //nose
+  strokeWeight(6);
+  line(x, y+44, x, y+70); //mouth line 1
+  line(x-15, y+70, x+15, y+70); //mouth line 2
+  line(317, 470, 324, 462); //mouth line 3
+  line(283, 470, 276, 462); //mouse line 4
+
+  strokeWeight(4);
+  //textFont(myFont);
+  fill(0);
+  text ("2", x-10, y-40); 
+  text ("4", x-10, bodyy);
+  text ("2", x+120, bodyy-40);
+  text ("2", x-135, bodyy-40);
+  text ("2", x+88, y+379);
+  text ("2", x-100, y+379);
+  line (x+93, eary, x+135, eary);
+  text ("2", x+139, eary+8);
+  line (x-93, eary, x-135, eary);
+  text ("2", x-158, eary+8);   
+  textSize(40);
+  text("1", x-49, y-11);
+  text("1", x+30, y-11);
+  text("1", x-10, y+39);
+  text("3", x+65, eary+10);
+  text("3", x-80, eary+10);
+  text("2", x-10, bodyy-100);   
+  fill(255);
+}
