@@ -11,6 +11,8 @@ void draw() {
   //first balloon, must be filled at same time
   ellipse(300, 350, 80, 125);
   triangle(300, 411, 275, 435, 325, 435);
-  //second ballon, must be filled at same time
+  //second balloon, must be filled at same time
   ellipse(400, 400, 75, 125);
+  triangle(383, 455, 360, 460, 400, 490);
+  //third balloon, must be filled at same time
 }
