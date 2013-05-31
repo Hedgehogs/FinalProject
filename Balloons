@@ -2,7 +2,7 @@ void setup() {
   size(displayWidth, displayHeight);
 }
 void draw() {
-  stroke(3);
+  strokeWeight(3);
   line(300, 700, 200, 400);
   line(300, 700, 300, 400);
   line(300, 700, 400, 400);
@@ -15,4 +15,10 @@ void draw() {
   ellipse(400, 400, 75, 125);
   triangle(383, 455, 360, 460, 400, 490);
   //third balloon, must be filled at same time
+  textSize(25);
+  strokeWeight(3);
+  fill(0);
+  text("5", 195, 410);
+  text("4", 295, 360);
+  text("2", 395, 410);
 }
