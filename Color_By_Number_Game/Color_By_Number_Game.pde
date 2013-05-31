@@ -2,6 +2,7 @@ Grass grass;
 Sky sky;
 Sun sun;
 Cloud cloud;
+Bear bear;
 
 float rx=1300;
 float rw=100;
@@ -17,7 +18,6 @@ color g = color(0, 255, 0);
 color b = color(134, 230, 255);
 color brown = color(113, 51, 11);
 color tan = color(234, 192, 166);
-s
 color w = color(255);
 //The colors
 void setup() {
@@ -26,6 +26,7 @@ void setup() {
   sky = new Sky();
   sun = new Sun();
   cloud = new Cloud();
+  bear = new Bear();
 }
 
 void draw() {
@@ -69,6 +70,8 @@ void draw() {
   sun.display();
   //The cloud
   cloud.display();
+  //The bear
+  bear.display();
   //The Grass for coloring
   if (mousePressed && mouseX>0 && mouseX<width-150 && mouseY>height-200 && mouseY<height && c==g) {
     println("touch");
@@ -78,10 +81,8 @@ void draw() {
   //The sky for coloring
   if (mousePressed && mouseX>0 && mouseX<width-150 && mouseY>0 && mouseY<height-200 && c==b) {
     println("Sky");
-    //    if (sky.x != sun.x && sky.y != sun.y) {
     sky.c = c;
     sky.s1 = b;
-    //    }
   }
   //the circle of the sun for coloring
   if (mousePressed && mouseX>0 && mouseX<300 && mouseY>0 && mouseY<300 && c==y) {
@@ -103,10 +104,43 @@ void draw() {
     sun.s4=o;
   }
   //The cloud for coloring
-    if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==w) {
+  if (mousePressed && mouseX>1000 && mouseX<1200 && mouseY>150 && mouseY<274 && c==w) {
     cloud.c =c;
     cloud.s1 = w;
   }
+  //The bear for coloring
+  //The bear's head
+  if (mousePressed && mouseX>600 && mouseX<800 && mouseY>300 && mouseY<500 && c== brown) {
+    bear.cb = c;
+    bear.s1 = brown;
+  }
+  //The bear's body
+  if (mousePressed && ((mouseX>600 && mouseX<639 && mouseY>500 && mouseY<770 ) || (mouseX>760 && mouseX<794 && mouseY>500 && mouseY<770)) && c==brown) {
+    bear.cb2 = c;
+    bear.s2 = brown;
+  }
+  //The right arm
+  if (mousePressed && mouseX>796 && mouseX<860 && mouseY>550 && mouseY<620 && c==brown) {
+    bear.cb3 = c;
+    bear.s3 = brown;
+  }
+  //The left arm
+  if (mousePressed && mouseX>535 && mouseX<605 && mouseY>550 && mouseY<620 && c==brown) {
+    bear.cb4 = c;
+    bear.s4 = brown;
+  }
+  //The right foot
+  if (mousePressed && mouseX>740 &&  mouseX<850 && mouseY>735 && mouseY<800 && c== brown){
+    bear.cb5 = c;
+  bear.s5 = brown;
+}
+//the left foot
+if (mousePressed && mouseX>550 && mouseX<700 && mouseY>735 && mouseY<800 && c==brown) {
+  bear.cb6 = c;
+  bear.s6 = brown;
+}
+
+println(mouseY);
 }
 //The functions that make c eqaul a certain color when the mouse is pressed on the square of that color
 void mousePressed() {

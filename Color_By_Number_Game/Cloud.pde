@@ -1,4 +1,6 @@
 class Cloud {
+  int x = 800;
+  int y = -50;
   color c;
   color s1;
   Cloud() {
@@ -8,11 +10,11 @@ class Cloud {
   void display() {
     noStroke();
     fill(c);
-    ellipse(200, 200, 200, 124);
+    ellipse(198+x, 156+y, 100, 100);
+    ellipse(200+x, 200+y, 200, 124);
     //    println(mouseX + ", " + mouseY);
-    ellipse(198, 156, 100, 100);
     fill(s1);
-    text("7", 197, 193);
+    text("8", 197+x, 193+y);
   }
 }
 
