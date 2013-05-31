@@ -1,0 +1,13 @@
+float x = width/2;
+float y = height/2;
+
+void setup() {
+  size(800, 800);
+}
+void draw() {
+  noStroke();
+  translate(width/2, height/2);
+  ellipse(x, y, 80, 40);
+  ellipse(x, y-10, 40, 40);
+  ellipse(x, y+10, 40, 40);
+}
