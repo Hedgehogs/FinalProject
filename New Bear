@@ -58,21 +58,32 @@ void draw() {
   textFont(myFont);
   fill(0);
   text ("2",x-10,y-40); 
+  //head
   text ("4",x-10,bodyy);
+  //inner part of stomach
   text ("2",x+120,bodyy-40);
+  //right arm
   text ("2",x-135,bodyy-40);
+  //left arm
   text ("2",x+88, y+379);
+  //right foot
   text ("2",x-100, y+379);
+  //left foot
   line (x+93, eary, x+135, eary);
   text ("2",x+139,eary+8);
+  //outer part of right ear
    line (x-93, eary, x-135, eary);
-  text ("2",x-158,eary+8);   
+  text ("2",x-158,eary+8); 
+  //outer part of left ear
   textSize(40);
    text("1", x-49, y-11);
   text("1",x+30,y-11);
     text("1",x-10,y+39);
   text("3",x+65,eary+10);
+  //inner part of right ear
   text("3",x-80,eary+10);
-  text("2",x-10,bodyy-100);   
+  //inner part of left ear
+  text("2",x-10,bodyy-100);
+  //outer part of stomach
   fill(255);
 }
