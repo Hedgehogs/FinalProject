@@ -1,0 +1,81 @@
+int x;
+int y;
+
+void setup () {
+  size (600,600);
+  x=width/2;
+  y=height/2;
+}
+void draw(){
+background(255);
+//println(mouseX + " ," + mouseY);
+strokeWeight(3);
+  ellipse (x,y+70,74,74); //head  
+  ellipse (x-80,y+120,140,73); //body
+  ellipse (x-20,y+158,50,30); //front paw
+  pushMatrix();
+  translate (x-120,y+164);
+  rotate (radians(20));
+  ellipse (0,0,50,30); //back paw, rotated slightly
+  popMatrix();
+  ellipse (x-158,y+98,30,30); //tail
+  pushMatrix();
+    translate (x-32,y+13);
+    rotate(radians(-25));
+    ellipse (0,0,25,60); //Left outer ear
+    ellipse (0,0,10,40); //Left inner ear
+    popMatrix();  
+    pushMatrix();
+    translate (x+32,y+12);
+    rotate(radians(25));
+    ellipse (0,0,25,60); //Right outer ear
+    ellipse (0,0,10,40); //Right inner ear
+    popMatrix(); 
+    ellipse (x+15,y+60,10,10); //Right eye
+    ellipse (x-15,y+60,10,10); //Left eye
+    ellipse (x,y+80,14,10); //Nose
+    line(x,y+85,x,y+95); //Nose to mouth line
+    line(x-5,y+95,x+5,y+95); //Mouth line 1
+    line(294,395,290,392); //Mouth line 2
+    line(306,394,311,390); //Mouth line 3
+    line(x+7,y+80,x+22,y+80); //whisker 1
+    line(x-7,y+80,x-22,y+80); //whisker 2
+    pushMatrix(); 
+    translate (x+7,y+80);
+    rotate(radians(-25));
+    line(0,0,16,0); //whisker 3
+    popMatrix();
+    pushMatrix(); 
+    translate (x-7,y+80);
+    rotate(radians(25));
+    line(0,0,-16,0); //whisker 4
+    popMatrix();
+    pushMatrix();
+    translate(x+7,y+80);
+    rotate(radians(38));
+    strokeWeight(1);
+    line(-6,6,65,0);
+    popMatrix();
+    line(x+15,y+60,x+75,y+60);
+     line(x-15,y+60,x-75,y+60);
+     line (x+32,y+12,x+72,y+12);
+     line(x-32,y+12,x-72,y+12);
+     line(x+45,y-4,x+99,y-4);
+     line(x-45,y-4,x-99,y-4);
+  fill(0);
+  textSize(18);
+  //Here is where all of the numbers are.Everything labeled 1 is the same color, even if 1 isn't the right number. 
+  text("1",x-4,y+60); //This is the head's color-the number in the forehead
+  text("1",x-80,y+120); //This is the body's number
+ text("1",x-22,y+162); //This is the right foot's number
+  text("1",x-122,y+168); //This is the left foot
+  text("1",x-162,y+104); //Tail
+  text("1",x+102,y-2); //Right ear
+  text("1",x-113,y-2); //Left ear
+  text("2",x+65,y+128); //nose
+  text ("2",x+79,y+16); //right inner ear
+  text("2",x-83,y+14); //left inner ear
+  text ("3",x+79,y+63); //right eye
+  text("3",x-85,y+63); //left eye
+  fill(255);
+}
