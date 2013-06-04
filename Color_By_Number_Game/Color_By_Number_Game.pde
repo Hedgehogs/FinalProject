@@ -81,7 +81,7 @@ void draw() {
   //The bear
   bear.display();
   //The balloons
-  //  balloon.display();
+  balloon.display();
   //  //The Bunny
   //  bunny.display();
   //The Grass for coloring
@@ -177,22 +177,16 @@ void draw() {
     bear.s10 =tan;
   }
   //balloons- first 
-  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==b) {
-  //    balloon.c1 = c;
-  //    balloon.s1 = b;
-  //  }
-  //  // second balloon
-  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==g) {
-  //    balloon.c2 = c;
-  //    balloon.s2 = g;
-  //  } 
-  //  //third balloon
-  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==o) {
-  //    balloon.c3= c;
-  //    balloon.s3 = o;
-  //  }
+  if (mousePressed && mouseX>410 && mouseX<490 && mouseY>210 && mouseY<330 && c==r) {
+    balloon.c1 = c;
+    balloon.s1 = r;
+  }
+  // second balloon
+  if (mousePressed && mouseX>510 && mouseX<590 && mouseY>160 && mouseY<280 && c==g) {
+    balloon.c2 = c;
+    balloon.s2 = g;
+  } 
 
-  //if(mousePressed && mouseX> && mouseX< && mouseY> && mouseY<){
   //THE BUNNY DRAWING
   //The head of the bunny
   //if(mousePressed && mouseX>660 && mouseX<735 && mouseY> && mouseY< && c==w){
@@ -246,40 +240,40 @@ void draw() {
   //    bunny.c10 = r;
   //  }
   //}
-  println(mouseY);
+  println(mouseX);
 }
 //The functions that make c eqaul a certain color when the mouse is pressed on the square of that color
 void mousePressed() {
   if (mouseX> rx && mouseX<rx+50 && mouseY>ry && mouseY<ry+50) {
-    println("red");
+    //    println("red");
     c = color(r);
   } 
   if (mouseX>rx && mouseX<rx+50 && mouseY> ry+100 && mouseY<ry+150) {
-    println("orange");
+    //    println("orange");
     c = color(o);
   }
   if (mouseX>rx && mouseX<rx+50 && mouseY>ry+200 && mouseY<ry+250) {
-    println("yellow");
+    //    println("yellow");
     c= color(y);
   }
   if (mouseX>rx && mouseX<rx+50 && mouseY>ry+300 && mouseY<ry+350) {
-    println("green");
+    //    println("green");
     c = color(g);
   }
   if (mouseX>rx && mouseX<rx+50 && mouseY>ry+400 && mouseY<ry+450) {
-    println("blue");
+    //    println("blue");
     c = color(b);
   }
   if (mouseX>rx && mouseX<rx+50 && mouseY>ry+500 && mouseY<ry+550) {
-    println("brown");
+    //    println("brown");
     c = color(brown);
   }
   if (mouseX>rx && mouseX<rx+50 && mouseY>ry+600 && mouseY<ry+650) {
-    println("tan");
+    //    println("tan");
     c = color(tan);
   }
   if (mouseX>rx && mouseX<rx+50 && mouseY>ry+700 && mouseY<ry+750) {
-    println("white");
+    //    println("white");
     c = color(w);
   }
 }

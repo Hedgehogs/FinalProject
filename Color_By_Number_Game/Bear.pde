@@ -150,8 +150,8 @@ class Bear {
     //outer part of right ear
     fill(s7);
     stroke(s7);
-    line (x-93, eary, x-135, eary);
-    text ("6", x-158, eary+8);   
+    line (x-70, eary-20, x-70, eary-60);
+    text ("6", x-75, eary-70);   
     //outer part of left ear
     fill(s9);
     text("7", x+65, eary+10);
