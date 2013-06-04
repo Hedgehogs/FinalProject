@@ -1,0 +1,24 @@
+PImage img;
+void setup() {
+  size(1400, 800);
+  img = loadImage("rsz_1bear.jpg");
+}
+void draw() {
+  fill(0, 102, 153);
+  textSize(64);
+  text("Choose a Drawing!", 400, 100); 
+  rect(100, 200, 450, 350);
+  image(img, 100, 200);
+  textSize(52);
+  text("Bear", 250, 600);
+  //Bear drawing
+  rect(800, 200, 450, 350);
+  text("Bunny", 950, 600);
+  //Bunny drawing
+  if (mousePressed) {
+    //bear
+  }
+  if (mousePressed) {
+    //bunny}
+  }
+}
