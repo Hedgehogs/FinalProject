@@ -24,6 +24,6 @@ void draw() {
     //bear
   }
   if (mousePressed && mouseX>800 && mouseX<1250 && mouseY>200 && mouseY<550) {
-    //bunny}
+    //bunny
   }
 }
