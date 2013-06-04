@@ -6,7 +6,6 @@ void draw() {
   strokeWeight(3);
   line(550, 570, 450, 270);
   line(550, 570, 550, 270);
-  line(550, 570, 650, 270);
   ellipse(450, 270, 75, 125);
   triangle(469, 323, 460, 360, 490, 330);
   //first balloon, must be filled at same time
