@@ -46,7 +46,7 @@ class Bunny {
     s10 = 0; // left inner ear
   }
   void display() {
-    //println(mouseX + " ," + mouseY);
+    stroke(0);
     strokeWeight(3);
     fill(c1);
     ellipse (x, y+70, 74, 74); //head
@@ -86,8 +86,6 @@ class Bunny {
     fill(0);
     line(x, y+85, x, y+95); //Nose to mouth line
     line(x-5, y+95, x+5, y+95); //Mouth line 1
-    line(294, 395, 290, 392); //Mouth line 2
-    line(306, 394, 311, 390); //Mouth line 3
     line(x+7, y+80, x+22, y+80); //whisker 1
     line(x-7, y+80, x-22, y+80); //whisker 2
     pushMatrix();
@@ -104,14 +102,17 @@ class Bunny {
     translate(x+7, y+80);
     rotate(radians(38));
     strokeWeight(1);
+    stroke(s8);
     line(-6, 6, 65, 0);
     popMatrix();
-    line(x+15, y+60, x+75, y+60);
-    line(x-15, y+60, x-75, y+60);
-    line (x+32, y+12, x+72, y+12);
-    line(x-32, y+12, x-72, y+12);
-    line(x+45, y-4, x+99, y-4);
-    line(x-45, y-4, x-99, y-4);
+    stroke(s9);
+    line (x+32, y+12, x+72, y+12);//right inner
+    stroke(s10);
+    line(x-32, y+12, x-72, y+12); // left inner
+    stroke(s6);
+    line(x+45, y-4, x+99, y-4); //right ear
+    stroke(s7);
+    line(x-45, y-4, x-99, y-4); //left ear
     fill(0);
     textSize(18);
     //Here is where all of the numbers are.Everything labeled 1 is the same color, even if 1 isn't the right number.
@@ -135,8 +136,6 @@ class Bunny {
     text ("1", x+79, y+16); //right inner ear
     fill(s10);
     text("1", x-83, y+14); //left inner ear
-    //    text ("3", x+79, y+63); //right eye
-    //    text("3", x-85, y+63); //left eye
   }
 }
 

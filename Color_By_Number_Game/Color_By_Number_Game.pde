@@ -6,13 +6,15 @@ Bear bear;
 Balloons balloon;
 
 Bunny bunny; 
+Grass2 gr;
+Flower flower;
 
 float rx=1300;
 float rw=100;
 float ry=30;
 //The variables
 int s1 = 3;
-//The stroke weights
+//The stroke weight
 color c;
 color r = color(255, 0, 0);
 color o = color(255, 132, 0);
@@ -32,12 +34,11 @@ void setup() {
   bear = new Bear();
   bunny = new Bunny();
   balloon = new Balloons();
+  gr = new Grass2();
+  flower = new Flower();
 }
 
 void draw() {
-  // if(mousePressed && mouseX> && mouseX< && mouseY> && mouseY<){
-  //display the bear drawing 
-  //  }
   background(255);
   strokeWeight(5);
   stroke(0);
@@ -71,19 +72,24 @@ void draw() {
   text("8", rx-30, ry+730);
   //The drawing
   //The grass in the picture
-  grass.display();
+  //  grass.display();
   //The sky in the picture
   sky.display();
   //The sun
   sun.display();
   //The cloud
-  cloud.display();
+  //  cloud.display();
   //The bear
-  bear.display();
+  //bear.display();
   //The balloons
-  balloon.display();
-  //  //The Bunny
-  //  bunny.display();
+  //balloon.display();
+  //THE BUNNY DRAWING
+  //the grass for the bunny
+  gr.display();
+  //The Bunny
+  bunny.display();
+  //Flower
+  flower.display();
   //The Grass for coloring
   if (mousePressed && mouseX>0 && mouseX<width-150 && mouseY>height-200 && mouseY<height && c==g) {
     println("touch");
@@ -189,58 +195,84 @@ void draw() {
 
   //THE BUNNY DRAWING
   //The head of the bunny
-  //if(mousePressed && mouseX>660 && mouseX<735 && mouseY> && mouseY< && c==w){
-  // bunny.c1 = c;
-  //bunny.s1 = w;
-  //}
+  if (mousePressed && mouseX>660 && mouseX<735 && mouseY>430 && mouseY<500 && c==w) {
+    bunny.c1 = c;
+    bunny.s1 = w;
+  }
   //The body of the bunny 
-  //  if(mousePressed && mouseX>550 && mouseX<650 && mouseY> && mouseY< && c==w){
-  //    bunny.c2 = c;
-  //    bunny.s2 = w;
-  //  }
+  if (mousePressed && mouseX>550 && mouseX<650 && mouseY>480 && mouseY<560 && c==w) {
+    bunny.c2 = c;
+    bunny.s2 = w;
+  }
   //The right foot of the bunny
-  //if(mousePressed && mouseX>650 && mouseX<700 && mouseY> && mouseY< && c==w){
-  //bunny.c3 = c;
-  // bunny.s3 = w;
-  //}
+  if (mousePressed && mouseX>650 && mouseX<700 && mouseY>540 && mouseY<570 && c==w) {
+    bunny.c3 = c;
+    bunny.s3 = w;
+  }
   //The left foot of the bunny
-  //  if (mousePressed && mouseX>550 && mouseX<600 && mouseY> && mouseY< && c==w) {
-  //    bunny.c4 = c;
-  //    bunny.s4 = w;
-  //  }
+  if (mousePressed && mouseX>550 && mouseX<600 && mouseY>545 && mouseY<580 && c==w) {
+    bunny.c4 = c;
+    bunny.s4 = w;
+  }
   //The tail of the bunny
-  //  if (mousePressed && mouseX>520 && mouseX<550 && mouseY> && mouseY< && c==w) {
-  //    bunny.c5 =c;
-  //    bunny.s5 = w;
-  //  }
-  //DID NOT PUT IN THE X VALUES FOR THIS YET
-  // The right ear of the bunny
-  // if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==w) {
-  //  bunny.c6 = c;
-  //  bunny.c6 = w;
-  //  }
+  if (mousePressed && mouseX>520 && mouseX<550 && mouseY>480 && mouseY<510 && c==w) {
+    bunny.c5 =c;
+    bunny.s5 = w;
+  }
+  //   The right ear of the bunny
+  if (mousePressed && mouseX>720 && mouseX<750 && mouseY>380 && mouseY<440 && c==w) {
+    bunny.c6 = c;
+    bunny.s6 = b;
+  }
   //The left ear of the bunny
-  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==w) {
-  //    bunny. c7 = c;
-  //    bunny.s7 =w;
-  //  }
+  if (mousePressed && mouseX>650 && mouseX<680 && mouseY>380 && mouseY<440 && c==w) {
+    bunny. c7 = c;
+    bunny.s7 =b;
+  }
   //The  nose of the bunny
-  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==r) {
-  //    bunny.c8 = c;
-  //    bunny.s8 =r;
-  //  }
+  if (mousePressed && mouseX>690 && mouseX<706 && mouseY>475 && mouseY<485 && c==r) {
+    bunny.c8 = c;
+    bunny.s8 =b;
+  }
   //The right inner ear
-  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==r) {
-  //    bunny.c9 = c;
-  //    bunny.c9 = r;
-  //  }
+  if (mousePressed && mouseX>725 && mouseX<737 && mouseY>390 && mouseY<430 && c==r) {
+    bunny.c9 = c;
+    bunny.s9 = b;
+  }
   //The left inner ear
-  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==r) {
-  //    bunny.c10 = c;
-  //    bunny.c10 = r;
+  if (mousePressed && mouseX>660 && mouseX<675 && mouseY>390 && mouseY<430 && c==r) {
+    bunny.c10 = c;
+    bunny.s10 = b;
+  }
+  //The Bunny grass
+  if (mousePressed && mouseX>0 && mouseX<1250 && mouseY>height-250 && mouseY<height && c==g) {
+    gr.c1 = c;
+    gr.s1 = g;
+  }
+  //The middle of flower
+  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==y) {
+  //    flower.c8 = c;
+  //    flower.s8 =y;
   //  }
-  //}
-  println(mouseX);
+  //the top petal
+  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==r) {
+  //    flower.c4 = c;
+  //    flower.s4 = r;
+  //  }
+  //the left petal
+  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==r) {
+  //   flower.c7 =c;
+  //    flower.s7 =r;
+  //  }
+  //the right petal
+  //  if(mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==r){
+  //   flower.c5 =c;
+  //  clower.s5 =r; 
+  //  }
+  //the stem
+  //the right leaf
+  //the left leaf
+  println(mouseY);
 }
 //The functions that make c eqaul a certain color when the mouse is pressed on the square of that color
 void mousePressed() {
