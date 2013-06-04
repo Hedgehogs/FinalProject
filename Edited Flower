@@ -1,0 +1,32 @@
+float l = 100;
+
+void setup() {
+  size(800, 800);
+}
+void draw() {
+
+  ellipse(346+8, 635, l, 40); //left leaf
+  ellipse(454+8, 635, l, 40); //right leaf
+  rect(width/2, height/2+70, 20, 350); //stem
+
+  ellipse(width/2, height/2, l, l); //top petal
+  ellipse(472, 450, l, l); //right petal
+  ellipse(417, 526, l, l); //bottom petal
+  ellipse(340, 466, l, l); //left petal
+
+    ellipse(width/2+8, height/2+60, 80, 80); //middle
+  fill(0);
+  textSize(29);
+  text ("3", width/2, height/2+70); //middle
+  text("4", width/2+2, height/2+280); //stem
+  text ("4", 346+4, 645); //left leaf
+  text ("4", 454+8, 645); //right leaf
+  text ("1", width/2, height/2); // top petal
+  text("1", 472, 450); //right petal
+  text("1", 410, 540); //bottom petal
+  text("1", 340, 466); //left petal
+
+
+
+  fill(255);
+}
