@@ -1,13 +1,18 @@
 PImage img;
+//bear
+PImage img1;
+//background
 void setup() {
   size(1400, 800);
   img = loadImage("rsz_1bear.jpg");
+  img1 = load Image(Red Background no logo.png");
 }
 void draw() {
-  fill(0, 102, 153);
+  image(img1, 0, 0);
+  //background
+  fill(0, 8, 152);
   textSize(64);
   text("Choose a Drawing!", 400, 100); 
-  rect(100, 200, 450, 350);
   image(img, 100, 200);
   textSize(52);
   text("Bear", 250, 600);
@@ -15,10 +20,10 @@ void draw() {
   rect(800, 200, 450, 350);
   text("Bunny", 950, 600);
   //Bunny drawing
-  if (mousePressed) {
+  if (mousePressed && mouseX>100 && mouseX<550 && mouseY>200 && mouseY<550) {
     //bear
   }
-  if (mousePressed) {
+  if (mousePressed && mouseX>800 && mouseX<1250 && mouseY>200 && mouseY<550) {
     //bunny}
   }
 }
