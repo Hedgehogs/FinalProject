@@ -1,3 +1,10 @@
+PImage img;
+//bear
+PImage img1;
+//background
+boolean bearStart;
+boolean bunnyStart;
+
 Grass grass;
 Sky sky;
 Sun sun;
@@ -8,6 +15,8 @@ Balloons balloon;
 Bunny bunny; 
 Grass2 gr;
 Flower flower;
+Cloud2 clou;
+Bunny2 fred;
 
 float rx=1300;
 float rw=100;
@@ -27,6 +36,8 @@ color w = color(255);
 //The colors
 void setup() {
   size(1400, 800);
+  img = loadImage("Bear Pic.jpg");
+  img1 = loadImage("Red Background Pic.png");
   grass = new Grass();
   sky = new Sky();
   sun = new Sun();
@@ -36,60 +47,119 @@ void setup() {
   balloon = new Balloons();
   gr = new Grass2();
   flower = new Flower();
+  clou = new Cloud2();
+  fred = new Bunny2();
 }
 
 void draw() {
-  background(255);
-  strokeWeight(5);
-  stroke(0);
-  line(width-150, 0, width-150, height);
-  fill(r);
-  rect(rx, ry, 50, 50);
-  fill(o);
-  rect(rx, ry+100, 50, 50);
-  fill(y); 
-  rect(rx, ry+200, 50, 50);
-  fill(g); 
-  rect(rx, ry+300, 50, 50);
-  fill(b);
-  rect(rx, ry+400, 50, 50);
-  fill(brown);
-  rect(rx, ry+500, 50, 50);
-  fill(tan);
-  rect(rx, ry+600, 50, 50);
-  fill(w);
-  rect(rx, ry+700, 50, 50);
-  fill(0);
-  textSize(25);
-  strokeWeight(s1);
-  text("1", rx-30, ry+30);
-  text("2", rx-30, ry+130);
-  text("3", rx-30, ry+230);
-  text("4", rx-30, ry+330);
-  text("5", rx-30, ry+430);
-  text("6", rx-30, ry+530);
-  text("7", rx-30, ry+630);
-  text("8", rx-30, ry+730);
-  //The drawing
-  //The grass in the picture
-  //  grass.display();
-  //The sky in the picture
-  sky.display();
-  //The sun
-  sun.display();
-  //The cloud
-  //  cloud.display();
-  //The bear
-  //bear.display();
-  //The balloons
-  //balloon.display();
+  image(img1, 0, 0);
+  //background for the start screen
+  fill(0, 8, 152);
+  textSize(64);
+  text("Choose a Drawing!", 400, 100); 
+  image(img, 100, 200);
+  textSize(52);
+  text("Bear", 250, 600);
+  //Bear drawing
+  rect(800, 200, 450, 350);
+  text("Bunny", 950, 600);
+  //Bunny drawing
+  //Code to get to the bear drawing 
+  if (bearStart == true) {
+    background(255);
+    strokeWeight(5);
+    stroke(0);
+    line(width-150, 0, width-150, height);
+    fill(r);
+    rect(rx, ry, 50, 50);
+    fill(o);
+    rect(rx, ry+100, 50, 50);
+    fill(y); 
+    rect(rx, ry+200, 50, 50);
+    fill(g); 
+    rect(rx, ry+300, 50, 50);
+    fill(b);
+    rect(rx, ry+400, 50, 50);
+    fill(brown);
+    rect(rx, ry+500, 50, 50);
+    fill(tan);
+    rect(rx, ry+600, 50, 50);
+    fill(w);
+    rect(rx, ry+700, 50, 50);
+    fill(0);
+    textSize(25);
+    strokeWeight(s1);
+    text("1", rx-30, ry+30);
+    text("2", rx-30, ry+130);
+    text("3", rx-30, ry+230);
+    text("4", rx-30, ry+330);
+    text("5", rx-30, ry+430);
+    text("6", rx-30, ry+530);
+    text("7", rx-30, ry+630);
+    text("8", rx-30, ry+730);
+    //The drawing
+    //The grass in the picture
+    grass.display();
+    //The sky in the picture
+    sky.display();
+    //The sun
+    sun.display();
+    //The cloud
+    cloud.display();
+    //The bear
+    bear.display();
+    //The balloons
+    balloon.display();
+  }
+
   //THE BUNNY DRAWING
-  //the grass for the bunny
-  gr.display();
-  //The Bunny
-  bunny.display();
-  //Flower
-  flower.display();
+  if (bunnyStart == true) {
+    background(255);
+    strokeWeight(5);
+    stroke(0);
+    line(width-150, 0, width-150, height);
+    fill(r);
+    rect(rx, ry, 50, 50);
+    fill(o);
+    rect(rx, ry+100, 50, 50);
+    fill(y); 
+    rect(rx, ry+200, 50, 50);
+    fill(g); 
+    rect(rx, ry+300, 50, 50);
+    fill(b);
+    rect(rx, ry+400, 50, 50);
+    fill(brown);
+    rect(rx, ry+500, 50, 50);
+    fill(tan);
+    rect(rx, ry+600, 50, 50);
+    fill(w);
+    rect(rx, ry+700, 50, 50);
+    fill(0);
+    textSize(25);
+    strokeWeight(s1);
+    text("1", rx-30, ry+30);
+    text("2", rx-30, ry+130);
+    text("3", rx-30, ry+230);
+    text("4", rx-30, ry+330);
+    text("5", rx-30, ry+430);
+    text("6", rx-30, ry+530);
+    text("7", rx-30, ry+630);
+    text("8", rx-30, ry+730);
+    //The sky in the picture
+    sky.display();
+    //The sun
+    sun.display();
+    //The Bunny
+    //the grass for the bunny
+    gr.display();
+    bunny.display();
+    //Flower
+    flower.display();
+    //The cloud
+    clou.display();
+    //The standing bunny
+    fred.display();
+  }
   //The Grass for coloring
   if (mousePressed && mouseX>0 && mouseX<width-150 && mouseY>height-200 && mouseY<height && c==g) {
     println("touch");
@@ -289,10 +359,77 @@ void draw() {
     flower.c1 = c;
     flower.s1 = g;
   }
+  //The second cloud for coloring
+  if (mousePressed && mouseX>900 && mouseX<1100 && mouseY>55 && mouseY<210 && c==w) {
+    clou.c =c;
+    clou.s1 = w;
+  }
+  //FRED!!!
+  //the head
+  if (mousePressed && mouseX>320 && mouseX<380 && mouseY>570 && mouseY<630 && c==tan) {
+    fred.c1= c;
+    fred.s1 = tan;
+  }
+  //the right ear
+  if (mousePressed && mouseX>350 && mouseX<380 && mouseY>500 && mouseY<580 && c==tan) {
+    fred.c2 = c;
+    fred.s2 = b;
+  }
+  // the left ear
+  if (mousePressed && mouseX>315 && mouseX<345 && mouseY>500 && mouseY<580 && c==tan) {
+    fred.c3 = c;
+    fred.s3 = g;
+  }
+  //the body
+  if (mousePressed &&  mouseX>310 && mouseX<390 && mouseY>630 && mouseY<700 && c==tan) {
+    fred.c4 = c;
+    fred.s4 = tan;
+  }
+  //right paw
+  if (mousePressed && mouseX>360 && mouseX<380 && mouseY>650 && mouseY<675 && c==tan) {
+    fred.c5 = c;
+    fred.s5 =tan;
+  }
+  //left paw
+  if (mousePressed && mouseX>320 && mouseX<340 && mouseY>650 && mouseY<675 && c==tan) {
+    fred.c6 = c;
+    fred.s6= tan;
+  }
+  //right leg
+  if (mousePressed && mouseX>365 && mouseX<395 && mouseY>695 && mouseY<715 && c==tan) {
+    fred.c7 = c;
+    fred.s7 = tan;
+  }
+  //left leg
+  if (mousePressed && mouseX>305 && mouseX<335 && mouseY>695 && mouseY<715 && c==tan) {
+    fred.c8 = c;
+    fred.s8 = tan;
+  }
+  //carrot
+  if (mousePressed && mouseX>350 && mouseX<370 && mouseY>650 && mouseY<680 && c==o) {
+    fred.c9 = c;
+    fred.s9 = o;
+  }
+  //right inner ear
+  if (mousePressed && mouseX>360 && mouseX<375 && mouseY>525 && mouseY<565 && c==r) {
+    fred.c10 =c;
+    fred.s10 = r;
+  }
+  //left inner ear
+  if (mousePressed && mouseX>320 && mouseX<335 && mouseY>525 && mouseY<565 && c==r) {
+    fred.c11 = c;
+    fred.s11=r;
+  }
   println(mouseX);
 }
 //The functions that make c eqaul a certain color when the mouse is pressed on the square of that color
 void mousePressed() {
+  if (mouseX>100 && mouseX<550 && mouseY>200 && mouseY<550) {
+    bearStart = true;
+  }
+  if (mousePressed && mouseX>800 && mouseX<1250 && mouseY>200 && mouseY<550) {
+    bunnyStart =true;
+  }
   if (mouseX> rx && mouseX<rx+50 && mouseY>ry && mouseY<ry+50) {
     //    println("red");
     c = color(r);
