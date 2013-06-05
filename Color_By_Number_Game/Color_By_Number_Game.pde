@@ -245,34 +245,51 @@ void draw() {
     bunny.s10 = b;
   }
   //The Bunny grass
-  if (mousePressed && mouseX>0 && mouseX<1250 && mouseY>height-250 && mouseY<height && c==g) {
+  if (mousePressed && ((mouseX>0 && mouseX<950) || (mouseX>1050 && mouseX<1250))  && mouseY>height-250 && mouseY<height && c==g) {
     gr.c1 = c;
     gr.s1 = g;
   }
   //The middle of flower
-  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==y) {
-  //    flower.c8 = c;
-  //    flower.s8 =y;
-  //  }
+  if (mousePressed && mouseX>1015 && mouseX<1100 && mouseY>415 && mouseY<500 && c==y) {
+    flower.c8 = c;
+    flower.s8 =y;
+  }
   //the top petal
-  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==r) {
-  //    flower.c4 = c;
-  //    flower.s4 = r;
-  //  }
+  if (mousePressed && mouseX>1000 && mouseX<1100 && mouseY>350 && mouseY<430 && c==r) {
+    flower.c4 = c;
+    flower.s4 = r;
+  }
   //the left petal
-  //  if (mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==r) {
-  //   flower.c7 =c;
-  //    flower.s7 =r;
-  //  }
+  if (mousePressed && mouseX>940 && mouseX<1040 && mouseY>410 && mouseY<510 && c==r) {
+    flower.c7 =c;
+    flower.s7 =r;
+  }
   //the right petal
-  //  if(mousePressed && mouseX> && mouseX< && mouseY> && mouseY< && c==r){
-  //   flower.c5 =c;
-  //  clower.s5 =r; 
-  //  }
+  if (mousePressed && mouseX>1075 && mouseX<1175 && mouseY>400 && mouseY<500 && c==r) {
+    flower.c5 =c;
+    flower.s5 =r;
+  }
+  //the bottom petal
+  if (mousePressed && mouseX>1015 && mouseX<1115 && mouseY>480 && mouseY<580 && c==r) {
+    flower.c6 = c;
+    flower.s6 = r;
+  }
   //the stem
+  if (mousePressed && mouseX>1050 && mouseX<1070 && mouseY>570 && mouseY<height && c==g) {
+    flower.c3 = c;
+    flower.s3 = g;
+  }
   //the right leaf
+  if (mousePressed && mouseX>1070 && mouseX<1170 && mouseY>615 && mouseY<655 && c==g) {
+    flower.c2 = c;
+    flower.s2 = g;
+  }
   //the left leaf
-  println(mouseY);
+  if (mousePressed && mouseX>950 && mouseX<1050 && mouseY>615 && mouseY<655 && c==g) {
+    flower.c1 = c;
+    flower.s1 = g;
+  }
+  println(mouseX);
 }
 //The functions that make c eqaul a certain color when the mouse is pressed on the square of that color
 void mousePressed() {

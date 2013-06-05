@@ -39,6 +39,8 @@ class Flower {
     s8 =0;
   }
   void display() {
+    stroke(0);
+    strokeWeight(3);
     fill(c1);
     ellipse(346+8+x, 635, a, 40); //left leaf
     fill(c2);
