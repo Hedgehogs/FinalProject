@@ -2,10 +2,13 @@ PImage img;
 //bear
 PImage img1;
 //background
+PImage img2;
+//bunnies
 void setup() {
   size(1400, 800);
   img = loadImage("rsz_1bear.jpg");
-  img1 = load Image(Red Background no logo.png");
+  img1 = loadImage("Red Background no logo.png");
+  img2 = loadImage("rsz_bunnies.jpg);
 }
 void draw() {
   image(img1, 0, 0);
@@ -17,7 +20,7 @@ void draw() {
   textSize(52);
   text("Bear", 250, 600);
   //Bear drawing
-  rect(800, 200, 450, 350);
+  image(img2, 800, 200);
   text("Bunny", 950, 600);
   //Bunny drawing
   if (mousePressed && mouseX>100 && mouseX<550 && mouseY>200 && mouseY<550) {
