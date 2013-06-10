@@ -5,17 +5,14 @@ import ddf.minim.effects.*;
 Minim minim;
 AudioPlayer song;
 void setup(){
-  size(100, 100);
   minim = new Minim(this);
   // this loads mysong.wav from the data folder
-  song = minim.loadFile("AlphabetSong.mp3");
+  song = minim.loadFile("Background Music.mp3");
   song.play();
+  song.loop();
+  //allows song to loop after played through
 }
 void draw() { 
   background(0);
 }
-void stop() {
-  song.close();
-  minim.stop();
-  super.stop();
-}
+
