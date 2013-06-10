@@ -4,6 +4,14 @@ PImage img1;
 //background
 PImage img2;
 //bunnies
+//THE MUSIC
+import ddf.minim.*;
+import ddf.minim.signals.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+Minim minim;
+AudioPlayer song;
+
 boolean bearStart;
 boolean bunnyStart;
 //The booleans for when the game starts, and you click on a button
@@ -53,6 +61,13 @@ void setup() {
   flower = new Flower();
   clou = new Cloud2();
   fred = new Bunny2();
+  //The music
+  minim = new Minim(this);
+  // this loads mysong.wav from the data folder
+  song = minim.loadFile("Background Music.mp3");
+  song.play();
+  song.loop();
+  //allows song to loop after played through
 }
 
 void draw() {
